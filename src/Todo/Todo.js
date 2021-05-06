@@ -5,11 +5,11 @@ import TodoList from './TodoList'
 class Todo extends Component {
 
     state = {
-        TodoName : "Projects",
+        Todo : {tdId: "TD01",tdName: "Projects"},
         TodoLists : [
-            {tlId: "TL01",tlName: "To do"},
-            {tlId: "TL02",tlName: "In Progress"},
-            {tlId: "TL03",tlName: "Completed"}
+            {tlId: "TL01",tlName: "To do", tdId: Todo.tdId},
+            {tlId: "TL02",tlName: "In Progress", tdId: Todo.tdId},
+            {tlId: "TL03",tlName: "Completed", tdId: Todo.tdId}
         ],
         TodoItems : []
     };
@@ -34,7 +34,7 @@ class Todo extends Component {
 
         return (
             <div className="todo">
-                <h2>{this.state.TodoName}</h2>
+                <h2>{this.state.Todo.tdName}</h2>
     
                 <div className="todo-body">
                     {this.todoLists}
