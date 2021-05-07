@@ -5,10 +5,10 @@ const TodoItem = (props) => {
         <div className="todo-item">
             <div className="header">
                 <h4>{props.tiName}</h4>
-                <i class="zmdi zmdi-delete"></i>
+                <i onClick={props.deleteItem} title="Delete" className="zmdi zmdi-delete"></i>
             </div>
             <div className="content">
-                <p>{props.tiDesc}</p>
+                {props.children}
             </div>
         </div>
     )
